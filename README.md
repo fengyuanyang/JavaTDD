@@ -1,6 +1,6 @@
 ## JavaTDD
 <p align="center">
-  <a href="https://github.com/anuraghazra/JavaTDD/issues">
+  <a href="https://github.com/fengyuanyang/JavaTDD/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/fengyuanyang/JavaTDD?color=0088ff" />
   </a>
   <a href="https://github.com/fengyuanyang/JavaTDD/pulls">
