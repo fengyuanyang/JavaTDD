@@ -17,6 +17,22 @@
 5. Loops - while loop and for loop    
 
 more...
+### Code expected
+* Proper naming for variables, avoid using i,v,k...etc. The variable name should be self explanatory.
+* Proper names for files
+* Follow unit tests naming conventions - **MethodName_StateUnderTest_ExpectedBehavior**
+
+```
+    String hello(String name) {
+        return "Hello World " + name;
+    }
+
+    @Test
+    void hello_InputName_HelloWorldWithName() {
+        String result = helloWorld.hello("Name");
+        assertEquals("Hello World Name", result);
+    }
+```
 
 
 ## Background

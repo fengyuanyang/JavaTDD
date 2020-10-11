@@ -1,5 +1,6 @@
 package com.ordestiny.tdd;
 
+import com.ordestiny.tdd.string.HelloWorld;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
