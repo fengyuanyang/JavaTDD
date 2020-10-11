@@ -14,7 +14,9 @@
 2. Conditions - > , < , >=, <=, ==, !=
 3. Statements - if/else, switch
 4. Primitive - byte, short, int, long, float, double, boolean, char and test their edges.
-5. Loops - while loop and for loop    
+5. Loops - while loop and for loop
+6. Exception - TBD    
+7. Design Pattern - TBD        
 
 more...
 ### Code expected
@@ -34,6 +36,11 @@ more...
     }
 ```
 
+## Import and Execute
+It's a Gradle project, can be simply imported by any IDE such as Eclipse, Intellij.    
+Firstly , ```git clone https://github.com/fengyuanyang/JavaTDD.git```    
+Secondly, open with build.gradle file. IDE should do the rest of importing and dependencies download.    
+Thirdly, open any test file you would like to execute, run it.     
 
 ## Background
 As time goes by, project is getter big, people who wrote that code might have been missing.   
