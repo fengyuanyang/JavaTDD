@@ -5,7 +5,7 @@ public class Conditions {
     /**
      * @param first integer parameter
      * @param second integer parameter
-     * @return greater if the two integers
+     * @return greater of the two integers
      */
     public static int getMax(int first, int second) {
         if (first > second) {
@@ -18,7 +18,7 @@ public class Conditions {
     /**
      * @param first integer parameter
      * @param second integer parameter
-     * @return greater if the two integers. The same as @getMax but using ternary operator
+     * @return greater of the two integers. The same as @getMax but using ternary operator
      */
     public static int getMaxTernary(int first, int second) {
         return first > second ? first : second;
@@ -27,7 +27,7 @@ public class Conditions {
     /**
      * @param first integer parameter
      * @param second integer parameter
-     * @return greater if the two integers
+     * @return less of the two integers
      */
     public static int getMin(int first, int second) {
         if (first < second) {
@@ -40,7 +40,7 @@ public class Conditions {
     /**
      * @param first integer parameter
      * @param second integer parameter
-     * @return greater if the two integers. The same as @getMin but using ternary operator
+     * @return less of the two integers. The same as @getMin but using ternary operator
      */
     public static int getMinTernary(int first, int second) {
         return first < second ? first : second;
