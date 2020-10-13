@@ -43,6 +43,6 @@ Secondly, open with build.gradle file. IDE should do the rest of importing and d
 Thirdly, open any test file you would like to execute, run it.     
 
 ## Background
-As time goes by, project is getter big, people who wrote that code might have been missing.   
+As time goes by, project is getting bigger, people who wrote that code might have been missing.   
 How could I refactor those code I don't even know why the logic like this.   
 TDD is a perfect way for me to refactor or start the codes. What I need to do is trying my best to pass all the tests.
