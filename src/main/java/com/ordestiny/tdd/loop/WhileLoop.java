@@ -1,6 +1,7 @@
 package com.ordestiny.tdd.loop;
 
 public class WhileLoop {
+
     public int doWhile(int times) {
         int counter = 0;
         do {
