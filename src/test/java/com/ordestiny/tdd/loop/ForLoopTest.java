@@ -1,12 +1,10 @@
 package com.ordestiny.tdd.loop;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class ForLoopTest {
   List<Integer> sample = new ArrayList<Integer>(Arrays.asList(0, 1, 2, 3, 4));
@@ -15,19 +13,19 @@ public class ForLoopTest {
   @Test
   void standardForLoopTest() {
     List<Integer> list = loop.standardForLoop(5);
-    assertTrue(areListsSame(list, sample));
+    Assertions.assertTrue(areListsSame(list, sample));
   }
 
   @Test
   void forEachLoopTest() {
     List<Integer> list = loop.forEachLoop(5);
-    assertTrue(areListsSame(list, sample));
+    Assertions.assertTrue(areListsSame(list, sample));
   }
 
   @Test
-  void forXinYLoopTest() {
+  void forXinYloopTest() {
     List<Integer> list = loop.forXinYloop(5);
-    assertTrue(areListsSame(list, sample));
+    Assertions.assertTrue(areListsSame(list, sample));
   }
 
   private boolean areListsSame(List<Integer> list1, List<Integer> list2) {
