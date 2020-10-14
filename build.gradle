@@ -54,7 +54,7 @@ test {
 checkstyle {
     toolVersion '8.36.2'
     ignoreFailures = true
-    maxWarnings = 0
+    //maxWarnings = 0
 }
 
 checkstyleMain {
