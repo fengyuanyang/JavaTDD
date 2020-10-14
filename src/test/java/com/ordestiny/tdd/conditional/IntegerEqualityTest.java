@@ -1,6 +1,5 @@
-package conditional;
+package com.ordestiny.tdd.conditional;
 
-import com.ordestiny.tdd.conditional.IntegerEquality;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
