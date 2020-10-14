@@ -1,21 +1,22 @@
 package com.ordestiny.tdd.conditional;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Scanner;
 
 public class StatementsTest {
 	private Statements object = new Statements();
 
-	void ifElseIfTest() {
+	@Test
+	public void ifElseIfTest() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number between 10 and 99999 whose no. of digits is to be found: ");
 		int input = sc.nextInt();
 		object.ifElseIf(input);
 	}
 
-	void switchStatementTest() {
+	@Test
+	public void switchStatementTest() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first number: ");
 		Double input1 = sc.nextDouble();
