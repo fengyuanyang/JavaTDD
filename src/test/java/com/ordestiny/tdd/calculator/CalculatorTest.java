@@ -34,7 +34,8 @@ public class CalculatorTest {
     @Test
     void testDivideInvalid() {
         Assertions.assertThatThrownBy(() -> {
+            // Use the method calculator to divide here
             calculator.divide(10,0);
-        });
+        }).isInstanceOf(ArithmeticException.class);;
     }
 }
