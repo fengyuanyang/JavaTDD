@@ -55,7 +55,6 @@ checkstyle {
     toolVersion '8.36.2'
     ignoreFailures = false
     maxWarnings = 0
-    configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
 }
 
 checkstyleMain {

@@ -1,13 +1,19 @@
 package com.ordestiny.tdd.string;
 
 public class HelloWorld {
-  /** @return */
+  /**
+   * hello.
+   *
+   * @return
+   */
   String hello() {
     return "Hello World Java";
   }
 
   /**
-   * @param name
+   * hello.
+   *
+   * @param name String
    * @return
    */
   String hello(String name) {
@@ -15,9 +21,9 @@ public class HelloWorld {
   }
 
   /**
-   * Hello world with String.format %s is using for String format
+   * Hello world with String.format %s is using for String format.
    *
-   * @param name
+   * @param name String
    * @return
    */
   String helloStringFormat(String name) {

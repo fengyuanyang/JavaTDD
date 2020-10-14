@@ -3,7 +3,7 @@ package com.ordestiny.tdd.primitive.casting;
 public class Shorts {
 
   /**
-   * from byte to short is implicit
+   * from byte to short is implicit.
    *
    * @param to is a byte
    * @return
@@ -13,57 +13,72 @@ public class Shorts {
   }
 
   /**
-   * from char to short explicit
+   * from char to short explicit.
    *
-   * @param to
+   * @param to int
    * @return
    */
   public static short from(char to) {
-    if (to > Short.MAX_VALUE) throw new IllegalArgumentException();
+    if (to > Short.MAX_VALUE) {
+      throw new IllegalArgumentException();
+    }
 
     return (short) to;
   }
 
   /**
-   * from int to short is explicit
+   * from int to short is explicit.
    *
-   * @param to
+   * @param to int
    * @return
    */
   public static short from(int to) {
-    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) throw new IllegalArgumentException();
+    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) {
+      throw new IllegalArgumentException();
+    }
 
     return (short) to;
   }
 
   /**
-   * from long to short is explicit
+   * from long to short is explicit.
    *
-   * @param to
+   * @param to long
    * @return
    */
   public static short from(long to) {
 
-    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) throw new IllegalArgumentException();
+    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) {
+      throw new IllegalArgumentException();
+    }
 
     return (short) to;
   }
 
   /**
-   * from float to short is explicit
+   * from float to short is explicit.
    *
-   * @param to
+   * @param to float
    * @return
    */
   public static short from(float to) {
-    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) throw new IllegalArgumentException();
+    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) {
+      throw new IllegalArgumentException();
+    }
 
     return (short) to;
   }
 
-  /** from double to short is explicit */
+  /**
+   * from double to short is explicit.
+   *
+   * @param to double
+   * @return
+   */
   public static short from(double to) {
-    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) throw new IllegalArgumentException();
+    if (to > Short.MAX_VALUE || to < Short.MIN_VALUE) {
+      throw new IllegalArgumentException();
+    }
 
     return (short) to;
   }

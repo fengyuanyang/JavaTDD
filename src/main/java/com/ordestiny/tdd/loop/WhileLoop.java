@@ -2,6 +2,12 @@ package com.ordestiny.tdd.loop;
 
 public class WhileLoop {
 
+  /**
+   * doWhile.
+   *
+   * @param times int
+   * @return
+   */
   public int doWhile(int times) {
     int counter = 0;
     do {
@@ -10,6 +16,12 @@ public class WhileLoop {
     return counter;
   }
 
+  /**
+   * whileTimes.
+   *
+   * @param times int
+   * @return
+   */
   public int whileTimes(int times) {
     int counter = 0;
     while (counter < times) {

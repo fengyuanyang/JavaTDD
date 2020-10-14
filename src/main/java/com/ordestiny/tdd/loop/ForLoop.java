@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ForLoop {
+  /**
+   * standardForLoop.
+   *
+   * @param times int
+   * @return
+   */
   public List<Integer> standardForLoop(int times) {
     List<Integer> list = new ArrayList<>(times);
 
@@ -13,6 +19,12 @@ public class ForLoop {
     return list;
   }
 
+  /**
+   * forEachLoop.
+   *
+   * @param times int
+   * @return
+   */
   public List<Integer> forEachLoop(int times) {
     List<Integer> input = standardForLoop(times);
     List<Integer> list = new ArrayList<>(times);
@@ -21,7 +33,13 @@ public class ForLoop {
     return list;
   }
 
-  public List<Integer> forXinYLoop(int times) {
+  /**
+   * forXinYLoop.
+   *
+   * @param times int
+   * @return
+   */
+  public List<Integer> forXinYloop(int times) {
     List<Integer> input = standardForLoop(times);
     List<Integer> list = new ArrayList<>(times);
 
