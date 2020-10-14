@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class StatementsTest {
 	private Statements object = new Statements();
 
-	@Test
 	void ifElseIfTest() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number between 10 and 99999 whose no. of digits is to be found: ");
@@ -13,7 +12,6 @@ public class StatementsTest {
 		object.ifElseIf(input);
 	}
 
-	@Test
 	void switchStatementTest() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first number: ");
