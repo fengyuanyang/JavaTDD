@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id 'checkstyle'
 }
 
 group 'com.ordestiny'
@@ -46,7 +47,20 @@ jacocoTestCoverageVerification {
     }
 }
 
-
 test {
     useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion '8.36.2'
+    ignoreFailures = false
+    maxWarnings = 0
+}
+
+checkstyleMain {
+    source ='src/main/java'
+}
+
+checkstyleTest {
+    source ='src/test/java'
 }
