@@ -9,7 +9,7 @@ class WorkerTest {
     private final Worker worker = new Worker(factory);
 
     @Test
-    void testCheckProducts() {
+    void CheckProducts_AllProductsInTheToyFactoryShouldBeQualityChecked() {
         this.worker.checkProducts();
         this.factory.eachToy(toy -> {
             assertTrue(toy.hasQualityCheck());
