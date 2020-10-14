@@ -4,6 +4,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ShortsTest {
+  // for coverage test
+  private Shorts shorts = new Shorts();
 
   @Test
   public void from_receivingAbyte_ShouldReturnAshort() {
@@ -95,7 +97,7 @@ public class ShortsTest {
   public void from_receivingAillegalDouble_ShouldThrowsAnIllegalArgumentException() {
 
     double number = 13321321.0;
-    double otherNumber = 1232329.93;
+    double otherNumber = -1232329.93;
     Assertions.assertThatThrownBy(() -> Shorts.from(number))
         .isInstanceOf(IllegalArgumentException.class);
     Assertions.assertThatThrownBy(() -> Shorts.from(otherNumber))
