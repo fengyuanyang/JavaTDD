@@ -17,6 +17,8 @@
 5. Loops - while loop and for loop
 6. Exception - TBD    
 7. Design Pattern - TBD        
+8. Lambda
+    1. Functional Interface
 
 more...
 ### Code expected
