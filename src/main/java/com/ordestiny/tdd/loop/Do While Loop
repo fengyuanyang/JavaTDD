@@ -1,0 +1,13 @@
+// This a code for print all value of x with increasing 1 and upto 20
+public class Test {
+
+   public static void main(String args[]) {
+      int x = 10;
+
+      do {
+         System.out.print("value of x : " + x );
+         x++;
+         System.out.print("\n");
+      }while( x < 20 );
+   }
+}
