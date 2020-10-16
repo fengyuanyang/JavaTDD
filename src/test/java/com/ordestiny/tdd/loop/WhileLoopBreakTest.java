@@ -1,36 +1,18 @@
 package com.ordestiny.tdd.loop;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class WhileLoopBreakTest {
   private WhileLoopBreak loopBreak = new WhileLoopBreak();
 
-  @Test
-  void whenLoopBreakAt7_shouldReturn6() {
-    int expected = 7;
-    int actual = loopBreak.loopBreak(7);
-    Assertions.assertEquals(expected, actual);
-  }
-
-  @Test
-  void whenLoopBreakAt0_shouldReturn0() {
-    int expected = 0;
-    int actual = loopBreak.loopBreak(0);
-    Assertions.assertEquals(expected, actual);
-  }
-
-  @Test
-  void whenLoopBreakAt10_shouldReturn10() {
-    int expected = 10;
-    int actual = loopBreak.loopBreak(10);
-    Assertions.assertEquals(expected, actual);
-  }
-
-  @Test
-  void whenLoopBreakAtNegative1_shouldReturn10() {
-    int expected = 10;
-    int actual = loopBreak.loopBreak(-1);
-    Assertions.assertEquals(expected, actual);
+  @ParameterizedTest(name = "when loop break at {0}, it should return {1}")
+  @CsvSource({
+    "7, 7", "0, 0", "10, 10", "-1, -10",
+  })
+  void whenLoopBreakTest(int breakAt, int expectedResult) {
+    int actual = loopBreak.loopBreak(breakAt);
+    Assertions.assertEquals(expectedResult, actual);
   }
 }
