@@ -11,8 +11,8 @@ public class RangeTest {
 	
 	@Test
 	public void getAllPoints_whenStartNumberLessThanEndNumber_returnAllPointsFromStartToEnd() {
-		int[] result = {2, 3, 4, 5, 6};
-		assertArrayEquals(result, range.getAllPoints(2, 6));
+		int[] expectedResults = {2, 3, 4, 5, 6};
+		assertArrayEquals(expectedResults, range.getAllPoints(2, 6));
 	}
 	
 	@Test
@@ -22,7 +22,7 @@ public class RangeTest {
 	
 	@Test
 	public void getAllPoints_whenStartNumberEqualEndNumber_returnArrayWithOneElement() {
-		int[] result = {4};
-		assertArrayEquals(result, range.getAllPoints(4, 4));
+		int[] expectedResults = {4};
+		assertArrayEquals(expectedResults, range.getAllPoints(4, 4));
 	}
 }
