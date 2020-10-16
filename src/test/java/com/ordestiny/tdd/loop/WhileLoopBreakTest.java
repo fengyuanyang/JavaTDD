@@ -9,7 +9,7 @@ class WhileLoopBreakTest {
 
   @ParameterizedTest(name = "when loop break at {0}, it should return {1}")
   @CsvSource({
-    "7, 7", "0, 0", "10, 10", "-1, -10",
+    "7, 7", "0, 0", "10, 10", "-1, 10",
   })
   void whenLoopBreakTest(int breakAt, int expectedResult) {
     int actual = loopBreak.loopBreak(breakAt);
