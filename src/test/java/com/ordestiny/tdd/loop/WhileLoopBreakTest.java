@@ -5,7 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class WhileLoopBreakTest {
-  private WhileLoopBreak loopBreak = new WhileLoopBreak();
+  private final WhileLoopBreak loopBreak = new WhileLoopBreak();
 
   @ParameterizedTest(name = "when loop break at {0}, it should return {1}")
   @CsvSource({
