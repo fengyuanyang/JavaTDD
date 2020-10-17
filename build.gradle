@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.12'
+
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
     testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.5.13'
 
@@ -63,4 +65,8 @@ checkstyleMain {
 
 checkstyleTest {
     source ='src/test/java'
+}
+
+test {
+    useJUnitPlatform()
 }
