@@ -57,9 +57,10 @@ public class RangeTest {
 
 	@Test
 	public void containsRange_whenCompareStartIsGreaterThanCompareEnd_returnException() {
-		assertThrows(IllegalArgumentException.class, () -> range.containsRange(3,5,5,3));
-
-  @Test
+		assertThrows(IllegalArgumentException.class, () -> range.containsRange(3, 5, 5, 3));
+	}
+	
+    @Test
 	public void overlapsRange_whenRangeDoesntOverlaps_returnFalse() {
 		assertFalse(range.overlapsRange(2,5,7,10));
 	}
