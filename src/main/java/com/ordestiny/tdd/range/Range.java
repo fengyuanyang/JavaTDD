@@ -41,6 +41,26 @@ public class Range {
 			return false;
 		}
 		else{
+      throw new IllegalArgumentException();
+    }
+  }
+  
+  /**
+	 * checks if point from start to end overlaps with point from compareStart to compareEnd
+	 *
+	 * @param start
+	 * @param end
+	 * @param compareStart
+	 * @param compareEnd
+	 * @return true for overlaps range
+	 */
+	public boolean overlapsRange(int start, int end, int compareStart, int compareEnd) {
+		if (start < end && compareStart < compareEnd) {
+			if (compareStart > end) {
+				return false;
+			}
+			return true;
+		} else {
 			throw new IllegalArgumentException();
 		}
 	}
