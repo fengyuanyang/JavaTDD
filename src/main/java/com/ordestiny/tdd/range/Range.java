@@ -23,5 +23,24 @@ public class Range {
 			throw new IllegalArgumentException();
 		}
 	}
-	
+
+	/**
+	 * get all points from start to end
+	 *
+	 * @param start
+	 * @param end
+	 * @param compareStart
+	 * @param compareEnd
+	 * @return true for overlaps range
+	 */
+	public boolean overlapsRange(int start, int end, int compareStart, int compareEnd) {
+		if (start < end && compareStart < compareEnd) {
+			if (compareStart > end) {
+				return false;
+			}
+			return true;
+		} else {
+			throw new IllegalArgumentException();
+		}
+	}
 }
