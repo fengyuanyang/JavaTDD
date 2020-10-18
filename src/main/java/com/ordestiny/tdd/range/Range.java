@@ -25,7 +25,7 @@ public class Range {
 	}
 
 	/**
-	 * get all points from start to end
+	 * checks if point from start to end overlaps with point from compareStart to compareEnd
 	 *
 	 * @param start
 	 * @param end
