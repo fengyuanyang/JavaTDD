@@ -26,7 +26,7 @@ class FizzBuzzTest {
     }
 
     @Test
-    public void fizzBuzzIsCorrectlyPrinted() {
+    public void printFizzBuzz_given15Iterations_fizzBuzzIsCorrectlyPrinted() {
         fizzBuzz.printFizzBuzz(15);
         assertEquals("1\r\n" +
                 "2\r\n" +
@@ -46,29 +46,17 @@ class FizzBuzzTest {
     }
 
     @Test
-    public void multiplesOfThreeButNotFiveAreFizz() {
-        for (int i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && !(i % 5 == 0)) {
-                assertEquals("Fizz", fizzBuzz.fizzBuzz(i));
-            }
-        }
+    public void fizzBuzz_givenMultipleOfThree_fizzReturned() {
+        assertEquals("Fizz", fizzBuzz.fizzBuzz(3));
     }
 
     @Test
-    public void multiplesOfFiveButNotThreeAreBuzz() {
-        for (int i = 1; i <= 100; i++) {
-            if (!(i % 3 == 0) && (i % 5 == 0)) {
-                assertEquals("Buzz", fizzBuzz.fizzBuzz(i));
-            }
-        }
+    public void fizzBuzz_givenMultipleOfFive_buzzReturned() {
+        assertEquals("Buzz", fizzBuzz.fizzBuzz(5));
     }
 
     @Test
-    public void multiplesOfThreeAndFiveAreFizzBuzz() {
-        for (int i = 1; i <= 100; i++) {
-            if ((i % 3 == 0) && (i % 5 == 0)) {
-                assertEquals("FizzBuzz", fizzBuzz.fizzBuzz(i));
-            }
-        }
+    public void fizzBuzz_givenMultipleOfThreeAndFive_fizzBuzzReturned() {
+        assertEquals("FizzBuzz", fizzBuzz.fizzBuzz(15));
     }
 }
