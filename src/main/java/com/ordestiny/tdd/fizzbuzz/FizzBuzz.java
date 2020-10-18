@@ -2,8 +2,8 @@ package com.ordestiny.tdd.fizzbuzz;
 
 public class FizzBuzz {
 
-    public void fizzBuzz() {
-        for (int i = 1; i <= 100; i++) {
+    public void printFizzBuzz(int numberIteration) {
+        for (int i = 1; i <= numberIteration; i++) {
             System.out.println(fizzBuzz(i));
         }
     }
