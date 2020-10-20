@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RomanNumConverter {
-    static ArrayList<Integer> digits = new ArrayList<>();
-    static private final HashMap<Integer, String> ones = new HashMap<Integer, String>();
-    static private final HashMap<Integer, String> tens = new HashMap<Integer, String>();
-    static private final HashMap<Integer, String> hundreds = new HashMap<Integer, String>();
-    static private final HashMap<Integer, String> thousands = new HashMap<Integer, String>();
+     ArrayList<Integer> digits = new ArrayList<>();
+     private final HashMap<Integer, String> ones = new HashMap<Integer, String>();
+     private final HashMap<Integer, String> tens = new HashMap<Integer, String>();
+     private final HashMap<Integer, String> hundreds = new HashMap<Integer, String>();
+     private final HashMap<Integer, String> thousands = new HashMap<Integer, String>();
 
-  static   {
+     {
         ones.put(0, "");
         ones.put(1, "I");
         ones.put(2, "II");
@@ -55,7 +55,7 @@ public class RomanNumConverter {
      * add number digits to digits arrayList
      * @param number input number
      */
-  static   private void getDigits(int number) {
+     private void getDigits(int number) {
         while (number / 10 != 0) {
             digits.add(number % 10);
             number /= 10;
@@ -68,7 +68,7 @@ public class RomanNumConverter {
      * @param n Input number
      * @return Roman numeral format of n
      */
-  static   public String convert_roman_numeral(int n) {
+     public String convert_roman_numeral(int n) {
 
         if (n >= 4000 || n == 0) throw new IllegalArgumentException("Enter a valid Roman Numeral or Integer from 1 to 3,999.");
 
@@ -92,9 +92,7 @@ public class RomanNumConverter {
     }
 
 
-    public static void main(String[] args) {
-        convert_roman_numeral(4000);
-    }
+    
 
 
 }
