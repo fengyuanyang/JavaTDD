@@ -25,6 +25,27 @@ public class Range {
 	}
 
 	/**
+	 * checks if point from start to end contains point from compareStart to compareEnd
+	 *
+	 * @param start
+	 * @param end
+	 * @param compareStart
+	 * @param compareEnd
+	 * @return true for containing range
+	 */
+	public boolean containsRange(int start, int end, int compareStart, int compareEnd) {
+		if (start < end && compareStart < compareEnd) {
+			if (compareStart <= end && compareEnd <= end){
+				return true;
+			}
+			return false;
+		}
+		else{
+      throw new IllegalArgumentException();
+    }
+  }
+  
+  /**
 	 * checks if point from start to end overlaps with point from compareStart to compareEnd
 	 *
 	 * @param start

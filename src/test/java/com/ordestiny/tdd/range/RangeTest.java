@@ -26,6 +26,41 @@ public class RangeTest {
 	}
 
 	@Test
+	public void containsRange_whenRangeDoesntOverlaps_returnFalse() {
+		assertFalse(range.containsRange(2,5,7,10));
+	}
+
+	@Test
+	public void containsRange_whenHalfOfFirstRangeOverlapsSecondRange_returnFalse() {
+		assertFalse(range.containsRange(2,5,3,10));
+	}
+
+	@Test
+	public void containsRange_whenFirstRangeIsWithInSecondRange_returnFalse() {
+		assertFalse(range.containsRange(3,5,2,10));
+	}
+
+	@Test
+	public void containsRange_whenFirstRangeContainsSecondRange_returnTrue() {
+		assertTrue(range.containsRange(2,10,3,5));
+	}
+
+	@Test
+	public void containsRange_whenRangesAreEqual_returnTrue() {
+		assertTrue(range.containsRange(3,5,3,5));
+	}
+
+	@Test
+	public void containsRange_whenStartIsGreaterThanEnd_returnException() {
+		assertThrows(IllegalArgumentException.class, () -> range.containsRange(5,3,3,5));
+	}
+
+	@Test
+	public void containsRange_whenCompareStartIsGreaterThanCompareEnd_returnException() {
+		assertThrows(IllegalArgumentException.class, () -> range.containsRange(3, 5, 5, 3));
+	}
+	
+    @Test
 	public void overlapsRange_whenRangeDoesntOverlaps_returnFalse() {
 		assertFalse(range.overlapsRange(2,5,7,10));
 	}
