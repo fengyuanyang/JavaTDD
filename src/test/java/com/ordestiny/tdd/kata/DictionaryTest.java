@@ -22,7 +22,7 @@ public class DictionaryTest {
     }
 
     @Test
-    public void replaceAll_whenStringReplacedByOneElementInDictionary_returnEmptyString() {
+    public void replaceAll_whenStringReplacedByOneElementInDictionary_returnWordString() {
         String inputString = "/$temp/$";
         String expectedString = "temporary";
 
@@ -33,7 +33,7 @@ public class DictionaryTest {
     }
 
     @Test
-    public void replaceAll_whenStringReplacedByTwoElementsInDictionary_returnEmptyString() {
+    public void replaceAll_whenStringReplacedByTwoElementsInDictionary_returnLineString() {
         String inputString = "/$temp/$ here comes the name /$name/$";
         String expectedString = "temporary here comes the name John Doe";
 
