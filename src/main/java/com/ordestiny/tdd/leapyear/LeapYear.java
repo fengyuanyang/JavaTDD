@@ -1,4 +1,4 @@
-package leapYear;
+package com.ordestiny.tdd.leapyear;
 
 public class LeapYear {
     public static boolean isLeapYear(int year) {
