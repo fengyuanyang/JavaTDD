@@ -1,8 +1,8 @@
-package leapYear;
+package com.ordestiny.tdd.leapyear;
 
 import org.junit.jupiter.api.Test;
 
-import static leapYear.LeapYear.isLeapYear;
+import static com.ordestiny.tdd.leapyear.LeapYear.isLeapYear;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LeapYearTest {
