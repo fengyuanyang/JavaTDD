@@ -46,15 +46,11 @@ public class BowlingGame {
     for (; currentFrameIndex < NUMBER_OF_FRAMES_PER_GAME - 1; currentFrameIndex++) {
       currentFrameScore = frameScores[currentFrameIndex];
       separateScores = getSeparateRollScores(currentFrameScore);
-      if (prevScoreType == ScoreType.SPARE) {
-        interimScores[currentFrameIndex - 1] += separateScores[0];
-        if (currentFrameScore.contains(STRIKE)) {
-          interimScores[currentFrameIndex - 1] += 10;
-        }
-      }
-      if (prevScoreType == ScoreType.STRIKE) {
-        interimScores[currentFrameIndex - 1] += separateScores[0] + separateScores[1];
-      }
+
+      // calculate previous frame score
+      calculatePreviousFrameScore(prevScoreType, separateScores, currentFrameIndex);
+
+      // calculate current frame score
       if (currentFrameScore.contains(SPARE)) {
         if (prevScoreType == ScoreType.STRIKE && currentFrameIndex >= 2 && frameScores[currentFrameIndex - 2]
             .contains(STRIKE)) {
@@ -76,6 +72,7 @@ public class BowlingGame {
         prevScoreType = ScoreType.OPEN;
       }
     }
+    // calculate last frame score considering bonus rolls
     calculateLastFrameScore(frameScores, prevScoreType);
     return Arrays.stream(interimScores).sum();
   }
@@ -87,6 +84,19 @@ public class BowlingGame {
       return ScoreType.SPARE;
     } else {
       return ScoreType.OPEN;
+    }
+  }
+
+  private void calculatePreviousFrameScore(final ScoreType prevScoreType, final int[] rollScores,
+      int currentFrameIndex) {
+    if (prevScoreType == ScoreType.SPARE) {
+      interimScores[currentFrameIndex - 1] += rollScores[0];
+      if (frameScores[currentFrameIndex].contains(STRIKE)) {
+        interimScores[currentFrameIndex - 1] += 10;
+      }
+    }
+    if (prevScoreType == ScoreType.STRIKE) {
+      interimScores[currentFrameIndex - 1] += rollScores[0] + rollScores[1];
     }
   }
 
