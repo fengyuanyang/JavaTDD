@@ -18,7 +18,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkDog() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.DOG);
+        animal = AnimalFactory.getAnimal("Dog");
         assertEquals(animal.getClass(), Dog.class);
         assertEquals(animal.numberOfLegs(), 4);
         assertEquals(animal.typeOfAnimal(), AnimalType.MAMMAL);
@@ -26,7 +26,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkHuman() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.HUMAN);
+        animal = AnimalFactory.getAnimal("HUMAN");
         assertEquals(animal.getClass(), Human.class);
         assertEquals(animal.numberOfLegs(), 2);
         assertEquals(animal.typeOfAnimal(), AnimalType.MAMMAL);
@@ -34,7 +34,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkSalmon() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.SALMON);
+        animal = AnimalFactory.getAnimal("SALMON");
         assertEquals(animal.getClass(), Salmon.class);
         assertEquals(animal.numberOfLegs(), 0);
         assertEquals(animal.typeOfAnimal(), AnimalType.FISH);
@@ -42,7 +42,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkSnake() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.SNAKE);
+        animal = AnimalFactory.getAnimal("SNAKE");
         assertEquals(animal.getClass(), Snake.class);
         assertEquals(animal.numberOfLegs(), 0);
         assertEquals(animal.typeOfAnimal(), AnimalType.REPTILE);
@@ -50,7 +50,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkEarthworm() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.EARTHWORM);
+        animal = AnimalFactory.getAnimal("EARTHWORM");
         assertEquals(animal.getClass(), Earthworm.class);
         assertEquals(animal.numberOfLegs(), 0);
         assertEquals(animal.typeOfAnimal(), AnimalType.INVERTEBRATE);
@@ -58,7 +58,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkEagle() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.EAGLE);
+        animal = AnimalFactory.getAnimal("EAGLE");
         assertEquals(animal.getClass(), Eagle.class);
         assertEquals(animal.numberOfLegs(), 2);
         assertEquals(animal.typeOfAnimal(), AnimalType.BIRD);
@@ -66,10 +66,30 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkFrog() throws Exception{
-        animal = AnimalFactory.getAnimal(AnimalEnum.FROG);
+        animal = AnimalFactory.getAnimal("FROG");
         assertEquals(animal.getClass(), Frog.class);
         assertEquals(animal.numberOfLegs(), 2);
         assertEquals(animal.typeOfAnimal(), AnimalType.AMPHIBIAN);
+    }
+
+    @Test
+    public void checkBat() throws Exception{
+        try {
+            animal = AnimalFactory.getAnimal("BAT");
+        }
+        catch (Exception e) {
+            assertEquals(e.getClass(), IllegalArgumentException.class);
+        }
+    }
+
+    @Test
+    public void checkTelevision() throws Exception{
+        try{
+            animal = AnimalFactory.getAnimal("TELEVISION");
+        }
+        catch (Exception e){
+            assertEquals(e.getClass(), IllegalArgumentException.class);
+        }
     }
 
 }
