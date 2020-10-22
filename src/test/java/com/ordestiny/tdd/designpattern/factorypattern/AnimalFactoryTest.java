@@ -13,6 +13,9 @@ public class AnimalFactoryTest {
 
     Animal animal;
 
+    // CheckX test classes will check whether the factory method is able to create X
+    // It will also test if it working correctly, i.e whether the data returned by the class is correct or not
+
     @Test
     public void checkDog() throws Exception{
         animal = AnimalFactory.getAnimal(AnimalEnum.DOG);
@@ -69,9 +72,4 @@ public class AnimalFactoryTest {
         assertEquals(animal.typeOfAnimal(), AnimalType.AMPHIBIAN);
     }
 
-    @Test
-    public void checkAnimalFactory(){
-        AnimalFactory animalFactory = new AnimalFactory();
-        assertEquals(animalFactory.getClass(), AnimalFactory.class);
-    }
 }
