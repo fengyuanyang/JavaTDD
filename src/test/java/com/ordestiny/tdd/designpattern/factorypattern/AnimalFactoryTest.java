@@ -18,7 +18,7 @@ public class AnimalFactoryTest {
 
     @Test
     public void checkDog() throws Exception{
-        animal = AnimalFactory.getAnimal("Dog");
+        animal = AnimalFactory.getAnimal("DOG");
         assertEquals(animal.getClass(), Dog.class);
         assertEquals(animal.numberOfLegs(), 4);
         assertEquals(animal.typeOfAnimal(), AnimalType.MAMMAL);
