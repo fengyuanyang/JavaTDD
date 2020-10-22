@@ -10,7 +10,8 @@ import java.text.MessageFormat;
  * @author Rachit Parikh
  */
 public class AnimalFactory {
-    public static Animal getAnimal(AnimalEnum animalEnum) {
+    public static Animal getAnimal(String animal) {
+        AnimalEnum animalEnum = AnimalEnum.valueOf(animal);
         if(animalEnum.getInstance() == null){
             throw new InvalidParameterException();
         }
