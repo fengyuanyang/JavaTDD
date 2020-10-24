@@ -1,5 +1,6 @@
 package com.ordestiny.tdd.functions;
 
+// You can call this function by MissingNumber.getMissingNo(yourArray[]) in any class
 class MissingNumber {
 
     static int getMissingNo(int numberArray[]) {
