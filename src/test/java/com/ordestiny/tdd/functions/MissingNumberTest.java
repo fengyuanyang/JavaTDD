@@ -7,11 +7,12 @@ class MissingNumberTest {
 
 
     @Test
-    public void testMissingNumberPassed() {
+    public void testMissingNumber() {
 
         int a[] = {1, 2, 3, 4, 5, 6, 8};
         int missedNumber = MissingNumber.getMissingNo(a);
         // assert
         assertEquals(7, missedNumber);
     }
+
 }
