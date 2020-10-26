@@ -53,4 +53,18 @@ public class SearchingAlgorithms {
         return false;
     }
 
+    public static int missingNum(int[] searchArray)
+    {
+        int sum = 0;
+        int allNums = (searchArray.length+1)*(searchArray.length+2)/2;
+        for(int i = 0; i < searchArray.length ; i++)
+            {
+                sum += searchArray[i];
+            }
+        return allNums - sum;
+
+
+    }
+
+
 }
