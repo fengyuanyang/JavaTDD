@@ -4,6 +4,7 @@
 # IDE file
 build/
 .idea/
+*.iml
 
 # gradle directory
 .gradle/
