@@ -11,7 +11,14 @@ public class FooBarQix {
   private static final String BAR = "Bar";
   private static final String QIX = "Qix";
 
-
+  /**
+   * If the number is divisible by 3, write “Foo” instead of the number
+   * If the number is divisible by 5, add “Bar”
+   * If the number is divisible by 7, add “Qix”
+   * For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
+   * @param input the number you want to compute
+   * @return FooBarQix result or original number
+   */
   public static String compute(String input) {
     String result = "";
     BigDecimal number = new BigDecimal(input);
