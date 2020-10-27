@@ -53,4 +53,21 @@ public class SearchingAlgorithms {
         return false;
     }
 
+    /**
+     * Sequentially checks each element of the list until a match is found for given key or the whole list has been searched.
+     * Returns 0-based index if match is found, otherwise, returns -1.
+     *
+     * @param searchArray
+     * @param key
+     * @return integer
+     */
+    public static int linearSearch(int[] searchArray, int key) {
+        for(int i = 0; i < searchArray.length; i++) {
+            if(searchArray[i] == key){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }
