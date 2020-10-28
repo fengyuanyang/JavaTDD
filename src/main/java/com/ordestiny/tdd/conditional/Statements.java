@@ -41,26 +41,26 @@ public class Statements {
 
             case '+':
                 result = number1 + number2;
-                System.out.print(number1 + " + " + number2 + " = " + result);
+                return number1 + " + " + number2 + " = " + result;
                 break;
 
             case '-':
                 result = number1 - number2;
-                System.out.print(number1 + " - " + number2 + " = " + result);
+                return number1 + " - " + number2 + " = " + result;
                 break;
 
             case '*':
                 result = number1 * number2;
-                System.out.print(number1 + " * " + number2 + " = " + result);
+                return number1 + " * " + number2 + " = " + result;
                 break;
 
             case '/':
                 result = number1 / number2;
-                System.out.print(number1 + " / " + number2 + " = " + result);
+                return number1 + " / " + number2 + " = " + result;
                 break;
 
             default:
-                System.out.println("Invalid operator!");
+                return "Invalid operator!";
                 break;
         }
 
