@@ -42,26 +42,21 @@ public class Statements {
             case '+':
                 result = number1 + number2;
                 return (number1 + " + " + number2 + " = " + result);
-                break;
 
             case '-':
                 result = number1 - number2;
                 return (number1 + " - " + number2 + " = " + result);
-                break;
 
             case '*':
                 result = number1 * number2;
                 return (number1 + " * " + number2 + " = " + result);
-                break;
 
             case '/':
                 result = number1 / number2;
                 return (number1 + " / " + number2 + " = " + result);
-                break;
 
             default:
                 return ("Invalid operator!");
-                break;
         }
 
     }
