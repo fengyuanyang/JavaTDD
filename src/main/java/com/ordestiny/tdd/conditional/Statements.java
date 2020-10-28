@@ -25,7 +25,7 @@ public class Statements {
         }
     }
 
-    public void switchStatement(Double number1, char operator, Double number2) {
+    public String switchStatement(Double number1, char operator, Double number2) {
 
         /**
          *  Selects operator using switch 
