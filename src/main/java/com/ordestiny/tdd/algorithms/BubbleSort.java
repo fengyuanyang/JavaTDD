@@ -18,6 +18,13 @@ public class BubbleSort {
         return array;
     }
 
+
+    /**
+     * Swaps values at given indices for an array.
+     * 
+     * @param j
+     * @param array
+     */
     public void swap(int[] array, int j) {
         int temp = 0;
         if (array[j - 1] > array[j]) {
