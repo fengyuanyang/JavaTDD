@@ -18,7 +18,7 @@ public class BubbleSort {
         return array;
     }
 
-    public void swap(int[] array, int j){
+    public void swap(int[] array, int j) {
         int temp = 0;
         if (array[j - 1] > array[j]) {
             temp = array[j - 1];
