@@ -4,18 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class StringCalculatorTest {
 
-	private StringCalculator fixture;
+	private static StringCalculator fixture;
 
-	@BeforeEach
-	public void setup() {
-		this.fixture = new StringCalculator();
+	@BeforeAll
+	public static void setup() {
+		fixture = new StringCalculator();
 	}
 
 	@ParameterizedTest
