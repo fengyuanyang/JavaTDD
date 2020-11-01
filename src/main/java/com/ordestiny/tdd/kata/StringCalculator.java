@@ -1,6 +1,7 @@
 package com.ordestiny.tdd.kata;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
@@ -73,18 +74,15 @@ public class StringCalculator {
 
 		String[] arrayOfStringNumbers = numbers.split(delimiter);
 
-		return sumStringDigits(arrayOfStringNumbers);
+		return sum(arrayOfStringNumbers);
 	}
 
-	private double sumStringDigits(String[] digitsArray) {
-		double result = 0.0;
-
-		for (String digit : digitsArray) {
-			double num = Double.parseDouble(digit);
-			result += num;
-		}
-
-		return result;
+	private double sum(String[] numbers) {
+		Double sum = Arrays.stream(numbers)
+				.map(number-> Double.valueOf(number))
+				.reduce(0.0, Double::sum);
+		
+		return sum;
 	}
 
 	private String format(double value) {
