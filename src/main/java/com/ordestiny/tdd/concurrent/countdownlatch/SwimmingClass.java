@@ -1,4 +1,4 @@
-package com.ordestiny.tdd.concurrent;
+package com.ordestiny.tdd.concurrent.countdownlatch;
 
 import java.util.HashSet;
 import java.util.Set;
