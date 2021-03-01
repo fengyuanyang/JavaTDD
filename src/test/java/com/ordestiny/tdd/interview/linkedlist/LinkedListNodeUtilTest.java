@@ -27,7 +27,7 @@ public class LinkedListNodeUtilTest {
     }
 
     @Test
-    void partition_withNullNode_() {
+    void partition_withNullNode_expectNull() {
         LinkedListNode<Integer> currentNode = util.partition(null, 5);
 
         Assertions.assertEquals(null, currentNode);
