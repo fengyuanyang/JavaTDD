@@ -11,15 +11,8 @@ public class LinkedListNode<E> {
         return next != null;
     }
 
-    public void setNext(LinkedListNode<E> next) {
-        this.next = next;
-    }
-
     public E getData() {
         return data;
     }
 
-    public void setData(E data) {
-        this.data = data;
-    }
 }

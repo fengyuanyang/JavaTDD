@@ -41,8 +41,7 @@ public class LinkedListNodeUtil {
             return rightNodeHead;
         if (rightNodeHead == null)
             return leftNodeHead;
-        if (rightNodeHead != null)
-            leftCurrentNode.next = rightNodeHead;
+        leftCurrentNode.next = rightNodeHead;
 
         return leftNodeHead;
     }
