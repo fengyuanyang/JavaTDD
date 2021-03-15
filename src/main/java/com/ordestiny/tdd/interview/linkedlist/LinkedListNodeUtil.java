@@ -61,4 +61,45 @@ public class LinkedListNodeUtil {
 
         return leftNodeHead;
     }
+
+    /**
+     * interview Question:
+     * Detect a loop linkedlist node
+     * Given a list node
+     * When node link as (A->B->C-D->B)
+     * Expect return B
+     * When node link as (C->D->A->B->E->D)
+     * Expect return C
+     *
+     * @param head
+     * @return
+     */
+    public static LinkedListNode findLoopNode(LinkedListNode head) {
+        LinkedListNode slowNode = head;
+        LinkedListNode fastNode = head;
+
+        // find first meet node,
+        // k:(distance from list start to loop node start)
+        //
+        // number of nodes passed should be k + (circle length - mod(k, circle length))
+        while (fastNode != null && fastNode.hasNext()) {
+            slowNode = slowNode.next;
+            fastNode = fastNode.next.next;
+            if (slowNode == fastNode)
+                break;
+        }
+
+        // no meet
+        if (fastNode == null || fastNode.next == null)
+            return null;
+
+
+        slowNode = head;
+        while(slowNode != fastNode) {
+            slowNode = slowNode.next;
+            fastNode = fastNode.next;
+        }
+
+        return fastNode;
+    }
 }

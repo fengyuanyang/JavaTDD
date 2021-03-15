@@ -54,4 +54,29 @@ public class LinkedListNodeUtilTest {
         return node;
     }
 
+    @ParameterizedTest
+    @MethodSource("findLoopNodeArguments")
+    void foundLoopNode(LinkedListNode<Integer> node, int loopNodeIndex) {
+        LinkedListNode loopNode = node;
+        for (int i=0;i<loopNodeIndex;i++) {
+            loopNode = loopNode.next;
+        }
+        LinkedListNode endNode = loopNode;
+        while(endNode.hasNext())
+            endNode = endNode.next;
+
+        endNode.next = loopNode;
+        LinkedListNode returnNode = util.findLoopNode(node);
+        Assertions.assertEquals(loopNode.getData(), returnNode.getData());
+    }
+
+    private static Stream<Arguments> findLoopNodeArguments() {
+        return Stream.of(
+                Arguments.of(generate(3, 5, 8, 4, 10, 2, 1), 5),
+                Arguments.of(generate(3, 11, 20, 7, 9, 10), 3),
+                Arguments.of(generate(20, 19, 23, 13, 6, 5, 0), 5),
+                Arguments.of(generate(20, 19, 23, 13, 6, 5, 0), 4),
+                Arguments.of(generate(20), 0)
+        );
+    }
 }
